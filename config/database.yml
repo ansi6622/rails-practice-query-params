@@ -3,8 +3,8 @@ default: &default
 
 development:
   <<: *default
-  database: rails_active_record_practice_development
+  database: rails_practice_query_params_development
 
 test:
   <<: *default
-  database: rails_active_record_practice_test
+  database: rails_practice_query_params_test

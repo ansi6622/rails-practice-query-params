@@ -1,26 +1,23 @@
-# Rails ActiveRecord Practice
+# Rails Query Param Practice
 
-Create some ActiveRecord models:
+## Setup
 
-- In the `db/seeds.rb` file, write a script that will create 9 people.
-- Each person should have a unique name
-- Use each of the 3 methods to create people (experiment with different syntaxes)
-- Test your file by running `rake db:seed`
+```
+bundle
+rake db:create db:migrate db:seed
+rails s
+```
 
-Alter the index page:
+By default, you should see all records.
 
-- order by first name
-- filter so only awesome people are shown
-- filter so only people with green eyes are shown
+Add 4 links - sort by first name, last name, eye color and birth date.
+
+When you click any of those links, the page should be sorted by that field.
+
+There should be a 5th link "only show awesome people".
+When you click that link, it should filter out non-awesome people.
 
 ## Stretch
 
-Create a sidebar that allows users to filter by a unique list of every attribute.
-
-So if you have 4 people, two with green eyes and two with blue eyes, the sidebar
-would have 2 links:
-
-* green eyes
-* blue eyes
-
-HINT: you'll need to use query params
+Make it so that the "awesome" filter and one of the sorts can be applied at the
+same time.  HINT: you can access `params` in your views.
